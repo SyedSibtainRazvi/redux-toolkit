@@ -1,4 +1,5 @@
 import { createSlice, configureStore } from "@reduxjs/toolkit";
+import cakeReducer from "./features/cakeSlice";
 
 const initialState = { counter: 0, showCounter: true }
 
@@ -18,10 +19,13 @@ const counterSlice = createSlice({
     }
 });
 
-const store = configureStore({
-    reducer: counterSlice.reducer
-});
 
 export const counterActions = counterSlice.actions;
 
+const store = configureStore({
+    reducer: {
+        counter: counterSlice,
+        cake: cakeReducer
+    }
+    })
 export default store;

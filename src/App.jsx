@@ -1,5 +1,6 @@
 import React from 'react'
-import Counter from './components/Counter'
+import CakeView from './components/CakeView'
+// import Counter from './components/Counter'
 
 const App = () => {
   return (
@@ -7,7 +8,8 @@ const App = () => {
       <h1>
         Redux Toolkit
       </h1>
-    <Counter />
+    {/* <Counter /> */}
+    <CakeView />
     </div>
   
   )
